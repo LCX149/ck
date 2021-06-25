@@ -20,3 +20,5 @@ source ~/.bashrc
 
 echo "初始化完毕，输入：ck
 并回车即可开始获取cookie"
+
+rm az.sh
