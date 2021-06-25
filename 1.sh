@@ -2,6 +2,15 @@
 clear
 echo""
 
+if ! type wget >/dev/null 2>&1; then
+    echo '检测到wget未安装，开始安装！';
+#apt update && apt upgrade
+apt install wget
+echo "安装完毕，请再次执行一次本命令"
+exit
+else
+    echo 'wget 已安装，开始初始化';
+fi
 if ! type node >/dev/null 2>&1; then
     echo '检测到node未安装，开始安装！';
 #apt update && apt upgrade
