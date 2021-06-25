@@ -15,12 +15,11 @@ fi
 
 wget -P /data/data/com.termux/files/home/storage/shared/ck/ https://ghproxy.com/https://raw.githubusercontent.com/LCX149/ck/main/87865.tar
 
-tar -xvf /data/data/com.termux/files/home/storage/shared/ck/87865.tar /data/data/com.termux/files/home/storage/shared/ck/
+tar -xvf /data/data/com.termux/files/home/storage/shared/ck/87865.tar -C /data/data/com.termux/files/home/storage/shared/ck/
 
-cd ../usr/etc/
-
-sed -i "38i if test -f .bashrc;then source .bashrc;fi" profile
-sed -i "3i alias ck='node /data/data/com.termux/files/home/storage/shared/ck/cookie.js'" ~/.bashrc
+sed -i "38i if test -f .bashrc;then source .bashrc;fi" /data/data/com.termux/files/usr/etc/profile
+#sed -i "3i alias ck='node /data/data/com.termux/files/home/storage/shared/ck/cookie.js'" ~/.bashrc
+echo "alias ck='node /data/data/com.termux/files/home/storage/shared/ck/cookie.js'" > ~/.bashrc
 source ~/.bashrc
 
 echo "初始化完毕，请重启软件后输入：ck
