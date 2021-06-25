@@ -1,7 +1,6 @@
 ##
 clear
-echo"
-"
+echo""
 
 if ! type node >/dev/null 2>&1; then
     echo '检测到node未安装，开始安装！';
